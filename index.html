@@ -32,6 +32,10 @@
           </div>
           <div class="col-md-4 col-xl-2">
             <a
+              data-toggle="tooltip"
+              data-placement="bottom"
+              data-html="true"
+              title="Or call us at<br/><strong>1-206-555-1234</strong>"
               role="button"
               href="#reserveForm"
               class="btn btn-info btn-lg mt-4"
@@ -77,9 +81,88 @@
               </a>
             </li>
           </ul>
+          <span class="navbar-text ml-auto">
+            <a role="button" data-toggle="modal" data-target="#loginModal"
+              ><i class="fa fa-sign-in"></i> Login</a
+            >
+          </span>
         </div>
       </div>
     </nav>
+
+    <div id="loginModal" class="modal fade" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title">Login</h3>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <form>
+                <div class="form-row">
+                  <div class="form-group col-12">
+                    <label for="loginEmail" class="sr-only"
+                      >Email address</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      name="loginEmail"
+                      id="loginEmail"
+                      placeholder="Enter your email"
+                    />
+                  </div>
+
+                  <div class="form-group col-12">
+                    <label for="loginPassword" class="sr-only">Password</label>
+                    <input
+                      type="password"
+                      class="form-control"
+                      name="loginPassword"
+                      id="loginPassword"
+                      placeholder="Enter your password"
+                    />
+                  </div>
+
+                  <div class="col">
+                    <div class="form-check">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        name="rememberYes"
+                        id="rememberYes"
+                      />
+                      <label for="rememberYes" class="form-check-label">
+                        Remember Me</label
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <button
+                    type="button"
+                    class="btn btn-secondary btn-sm ml-auto"
+                    data-dismiss="modal"
+                  >
+                    Cancel
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-primary btn-sm text-right ml-1"
+                  >
+                    Sign In
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="container">
       <div class="row row-content align-items-center">
         <div class="col-sm-4 order-sm-last col-md-3">
@@ -250,7 +333,13 @@
     </footer>
     <!-- jQuery first, then Popper.js, then the Bootstrap JS Plugins -->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-    <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script>
+      $(function() {
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    </script>
   </body>
 </html>
