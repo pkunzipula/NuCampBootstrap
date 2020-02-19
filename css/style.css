@@ -175,6 +175,13 @@ label[data-site-type].active {
   transform: translate3d(-90px, 0, 0);
 }
 
+#carouselButton {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  z-index: 10;
+}
+
 @media only screen and (max-width: 1199px) {
   .navbar-brand:not(.mobile) {
     transform: translate3d(-150%, 0, 0);
