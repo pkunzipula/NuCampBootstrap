@@ -72,17 +72,12 @@
         <span
           class="navbar-text ml-md-auto text-center pb-2 pb-md-0 d-block d-lg-inline-block"
         >
-          <a
-            data-toggle="modal"
-            data-target="#reserveModal"
-            role="button"
-            class="btn btn-info btn-sm"
+          <a role="button" class="btn btn-info btn-sm" id="reservePopper"
             >Reserve Campsite</a
           >
           <a
             role="button"
-            data-toggle="modal"
-            data-target="#loginModal"
+            id="loginPopper"
             class="btn btn-outline-secondary btn-sm"
             ><i class="fa fa-sign-in d-md-none d-lg-inline"></i> Login</a
           >
@@ -116,7 +111,7 @@
     <div id="loginModal" class="modal fade" role="dialog">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <div class="modal-header">
+          <div class="modal-header text-white">
             <h3 class="modal-title">Login</h3>
             <button type="button" class="close" data-dismiss="modal">
               &times;
@@ -189,7 +184,7 @@
     <div id="reserveModal" class="modal fade" role="dialog">
       <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
-          <div class="modal-header text-white bg-info">
+          <div class="modal-header text-white">
             <h3 class="modal-title">Reserve a Campsite</h3>
             <button type="button" class="close" data-dismiss="modal">
               &times;
@@ -240,8 +235,9 @@
                       data-toggle="buttons"
                     >
                       <label
-                        class="btn btn-secondary active"
+                        class="btn btn-secondary active greenify"
                         data-site-type="tent"
+                        id="tent"
                       >
                         <input
                           type="radio"
@@ -254,6 +250,7 @@
                       <label
                         class="btn btn-secondary data-site-type"
                         data-site-type="rv"
+                        id="rv"
                       >
                         <input type="radio" name="siteType" id="siteRV" />
                         RV

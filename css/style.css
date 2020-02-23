@@ -16,6 +16,12 @@ header h2 {
 header p {
   color: cornflowerblue; }
 
+#reserveModal .modal-header {
+  background-color: #17a2b8; }
+
+#loginModal .modal-header {
+  background-color: #901cad; }
+
 .site-footer {
   background-image: linear-gradient(#cec8ff, white);
   padding: 20px 0; }
@@ -49,7 +55,7 @@ header p {
 label[data-site-type] {
   background-color: silver !important; }
 
-label[data-site-type].active {
+label[data-site-type].greenify {
   background-color: limegreen !important; }
 
 /* Masthead */

@@ -19,4 +19,21 @@ $(function() {
         .addClass("fa-pause");
     }
   });
+
+  $("#reservePopper").click(function() {
+    $("#reserveModal").modal("show");
+  });
+
+  $("#loginPopper").click(function() {
+    $("#loginModal").modal("show");
+  });
+
+  $("#tent").click(function() {
+    $(this).addClass("greenify");
+    $("#rv").removeClass("greenify");
+  });
+  $("#rv").click(function() {
+    $(this).addClass("greenify");
+    $("#tent").removeClass("greenify");
+  });
 });
